@@ -101,7 +101,7 @@
                         <div class="col-9">
                             <div class="row">
                                 <div class="logo-container knoll-textiles">
-                                    <a class="logo" href="kt_home.html"><img src="../images/Edelman-Logo-Olive.svg"></a>
+                                    <a class="logo" href="kt_home.html"><img src="./images/edelman-logo.svg"></a>
                                 </div>
                                 <div class="primary-nav-wrapper">
                                     <nav id="primaryNav" aria-label="Main">
@@ -285,10 +285,10 @@
         <div class="container kt" id="page">
             
             
-            <div class="companyoverview">
+            <div class="collaborator">
 
                   
-            <img style="margin-top: 120px;" class="full-width-img" src="images/Ballon_Ilse_Studio_1.jpg">
+            <img class="full-width-img-collab" src="images/Ballon_Ilse_Studio_1.jpg">
 
 
 
@@ -306,31 +306,19 @@
                 </div>
             </div>
 
-        
-                <div id="toc" class="collab">
-                    <!-- <div id="ilse" class="live">Ilse Crawford</div> 
-                    <div id="edelman">Ilse Crawford</div> 
-                    <div id="edelman">Ilse Crawford</div>  -->
-                </div>
-            
-         </div>
+    
 
 
 
         <div id="halfandhalf">
-            <div id="left-half">
+            <div id="left-half-no-crop">
             <img src="images/edelman-about-07.jpg">
             <p class="caption-black" style="color:grey;">Images: Nick Ballón</p>
             </div>
-            <div id="right-half">
+            <div id="right-half-no-crop">
             <img src="images/edelman-about-03.jpg">
             </div>
         </div>
-
-<!-- 
-            <p class="callout" style="z-index: 5000;">
-                Drawn to Crawford’s visionary practice and unique material sensibility, Edelman’s design studio invited Crawford to develop fresh color palettes for three quintessential Edelman leathers: <a href="https://staging.maharam.com/edelman/products/helm-by-ilse-crawford/" target="_blank">Helm</a>, <a href="https://staging.maharam.com/edelman/products/oath-by-ilse-crawford/" target="_blank">Oath</a>, and <a href="https://staging.maharam.com/edelman/products/poem-by-ilse-crawford/" target="_blank">Poem</a>.
-            </p> -->
             
 
             <div class="video-wrapper dark-background">
@@ -511,56 +499,9 @@
 
 <script>
 
-// Scroll to section on TOC click
-document.querySelector('#toc').addEventListener('click', function(event) {
-    const target = event.target;
-    if (target.tagName === 'DIV') {
-        const sectionId = {
-            edelman: 'one',
-            history: 'fleming-joffe',
-            origins: 'two',
-            designstudio: 'four',
-        }[target.id];
-
-        if (sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-            // Update active state
-            document.querySelectorAll('#toc div').forEach(el => el.classList.remove('live'));
-            target.classList.add('live');
-        }
-    }
-});
-
-// Observe sections for active state
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const sectionMap = {
-                one: 'edelman',
-                'fleming-joffe': 'history',
-                three: 'origins',
-                four: 'designstudio',
-            };
-
-            const tocId = sectionMap[entry.target.id];
-            if (tocId) {
-                document.querySelectorAll('#toc div').forEach(el => el.classList.remove('live'));
-                document.getElementById(tocId).classList.add('live');
-            }
-        }
-    });
-}, { threshold: 0.5 });
-
-// Observe all sections
-document.querySelectorAll('.copy-section').forEach(section => observer.observe(section));
-
-
 document.addEventListener('DOMContentLoaded', function() {
-  var images = document.querySelectorAll('.full-width-img');
-  var oliveImages = document.querySelectorAll('.full-width-img-olive');
+  var images = document.querySelectorAll('.full-width-img-collab');
   new simpleParallax(images);
-  new simpleParallax(oliveImages);
   scale: 1.1;
   delay: 1;
 });
@@ -568,87 +509,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <script>
 
-document.addEventListener('scroll', function() {
-  const section = document.querySelector('.copy-section');
-  const borderedDiv = document.querySelector('.bodycopy-left');
-  
-  // Get the section's top and bottom positions relative to the viewport
-  const sectionTop = section.getBoundingClientRect().top;
-  const sectionHeight = section.offsetHeight;
-  
-  // Calculate the scroll percentage within the section
-  if (sectionTop <= window.innerHeight && sectionTop + sectionHeight >= 0) {
-    const scrollProgress = Math.min(
-      (window.innerHeight - sectionTop) / sectionHeight,
-      1
-    );
-
-    // Set the border-left height of the borderedDiv based on scroll progress
-    borderedDiv.style.borderLeftHeight = scrollProgress * 100 + '%';
-  }
-});
-
-        $(document).ready(function(){
-
-            $('.image-scroll').slick({
-  centerMode: true,
-  centerPadding: '0px',
-  slidesToShow: 3,
-  prevArrow: '<img class="slick-prev" src="./images/icons/prev-green.svg" style="height:20px;">',
-  nextArrow: '<img class="slick-next" src="./images/icons/next-green.svg" style="height:20px">',
-
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '0px',
-        slidesToShow: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '10px',
-        slidesToShow: 3
-      }
-    }
-  ]
-});
-
-
-
-function updateProgressBarPosition(slick, currentSlide) {
-    const totalSlides = slick.slideCount;
-    
-    // Calculate progress bar position for each slide
-    if (currentSlide === 0) {
-      // Reset progress bar to the start when on the first slide
-      $('.progress-bar').css('left', '0%');
-    } else {
-      // Calculate left position based on the current slide
-      const progressPosition = (currentSlide / (totalSlides - 1)) * 80;
-      $('.progress-bar').css('left', progressPosition + '%');
-    }
-  }
-
-  // Initialize the progress bar on the first slide
-  $('.image-scroll').on('init', function(event, slick) {
-    updateProgressBarPosition(slick, 0);
-  });
-
-  // Update progress bar on each slide change
-  $('.image-scroll').on('afterChange', function(event, slick, currentSlide) {
-    updateProgressBarPosition(slick, currentSlide);
-  });
-
-
-
-
-        });
 
 
         $('nav#primaryNav ul li ul').hide().removeClass('fallback');

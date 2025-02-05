@@ -101,7 +101,7 @@
                         <div class="col-9">
                             <div class="row">
                                 <div class="logo-container knoll-textiles">
-                                    <a class="logo" href="kt_home.html"><img src="./images/SVG/edelman-logo.svg"></a>
+                                    <a class="logo" href="kt_home.html"><img src="./images/edelman-logo.svg"></a>
                                 </div>
                                 <div class="primary-nav-wrapper">
                                     <nav id="primaryNav" aria-label="Main">
@@ -318,9 +318,7 @@
                 </div>
 
                 </div>
-<!--             
-                <img class="full-width-img" src="./images/edelman-about-05.jpg" style="margin-top: 50px;">
-                <p class="caption-black">This is the image caption, 2006.,<br>Image courtesy of Edelman Archives.</p> -->
+
                 
             <div id="flemingjoffe" class="page-section">
 
@@ -337,11 +335,7 @@
                     </div>
                 </div>
 
-            <!-- <div class="copy-section">
-                <p style="color: white;" class="callout">
-                    Prior to founding Edelman, Arthur and Teddy led their family leather goods business Flemming-Joffe for thirty years, where they applied their genuine love of leather to the business. 
-                </p>
-            </div> -->
+
 
             <div id="halfandhalf" class="history-img">
                 <div id="left-half-no-crop">
@@ -375,10 +369,7 @@
                     <img src="images/carousel/EDMN_Warhol_ThisIsAChair.jpg">
                     <p class="carousel-img-caption">Image Caption.</p>
                     </div>
-                    <!-- <div>
-                    <img src="images/FJoffe_leathergloveenvelope.png">
-                    <p class="carousel-img-caption">Image Caption.</p>
-                    </div> -->
+
                     <div>
                         <img src="images/carousel/preview-3-expanded.jpg">
                         <p class="carousel-img-caption">Image Caption.</p>
@@ -428,11 +419,7 @@
                 <img class="full-width-img" src="images/edelman-about-11.jpg">
                 <p class="caption">Oath by Ilse Crawford in <a href="https://www.edelmanleather.com/products/oath-by-ilse-crawford/101-maize" target="_blank">101 Maize</a>.</p>
 
-                <!-- <div class="copy-section">
-                    <p class="callout">
-                        Guided by generations of expertise, Arthur and Teddy founded Edelman to share their love and knowledge of leather with the interiors industry. 
-                    </p>
-                </div> -->
+
 
                 <div id="halfandhalf">
                     <div id="left-half"></div>
@@ -460,25 +447,13 @@
                 </div>
             </div>
 
-            <!-- <div class="bodycopy-full-width">
-                <p class="black">
-                    Through rigorous sourcing and pioneering techniques, Edelman became a leader in luxury leather with an encyclopedic breadth of products for every interior application and an uncompromising commitment to premium raw materials. 
-                </p>
-            </div> -->
+
             </div>
 
-         
-               
-        
-                <div id="four" class="page-section">
+                 <div id="four" class="page-section">
                 <img class="full-width-img" src="./images/new/EDMN_Ballon_DesignStudio_Header.jpg">
                
-<!-- 
-                <div class="copy-section">
-                    <p class="callout">
-                        Today, Edelman’s design studio celebrates the warmth and integrity of leather as an enduring natural material.
-                    </p>
-                </div> -->
+
 
                 <div id="halfandhalf" style="margin-top: 150px; margin-bottom: 0;">
                     <div id="left-half">
@@ -496,18 +471,6 @@
                     </div>
                         </div>
 
-                
-                <!-- <img class="full-width-img" src="./images/Maharam_NB-FINAL-D_1759.jpg"> -->
-    
-
-
-                    <!-- <div class="copy-section">
-                        <div class="bodycopy-full-width">
-                            <p>
-                                Edelman prioritizes leather of exceptional quality—beginning with its original condition before any tanning, dyeing, or finishing occurs. A byproduct of the meat industry, all hides are sourced from Western Europe where strict regulation of animal welfare, including humane cattle and optimal veterinarian practices, ensures the integrity of premium raw materials. The design studio works with boutique, family-owned tanneries selected for their ability to produce the best of each desired quality and opts for minimal and nuanced finishing to highlight the inherent natural beauty of leather.
-                            </p>
-                        </div>
-                    </div> -->
 
                     <div id="halfandhalf" style="margin-top: 1rem;">
                         <div id="left-half">
@@ -714,7 +677,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('scroll', function() {
   const section = document.querySelector('.copy-section');
-  const borderedDiv = document.querySelector('.bodycopy-left');
+
   
   // Get the section's top and bottom positions relative to the viewport
   const sectionTop = section.getBoundingClientRect().top;
@@ -770,34 +733,7 @@ $('.image-scroll img').on('click', function () {
         $(this).toggleClass('expanded');
       });
 
-$('.image-scroll-two').slick({
-  centerMode: true,
-  centerPadding: '0px',
-  slidesToShow: 3,
-  prevArrow: '<img class="slick-prev" src="./images/icons/prev-black.svg" style="height:20px;">',
-  nextArrow: '<img class="slick-next" src="./images/icons/next-black.svg" style="height:20px">',
 
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '10px',
-        slidesToShow: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '10px',
-        slidesToShow: 1
-      }
-    }
-  ]
-});
 
 function updateProgressBarPosition(slick, currentSlide) {
     const totalSlides = slick.slideCount;
@@ -820,16 +756,6 @@ function updateProgressBarPosition(slick, currentSlide) {
 
   // Update progress bar on each slide change
   $('.image-scroll').on('afterChange', function(event, slick, currentSlide) {
-    updateProgressBarPosition(slick, currentSlide);
-  });
-
-   // Initialize the progress bar on the first slide
-   $('.image-scroll-two').on('init', function(event, slick) {
-    updateProgressBarPosition(slick, 0);
-  });
-
-  // Update progress bar on each slide change
-  $('.image-scroll-two').on('afterChange', function(event, slick, currentSlide) {
     updateProgressBarPosition(slick, currentSlide);
   });
 
