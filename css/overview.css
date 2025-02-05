@@ -1,6 +1,6 @@
 
 #flemingjoffe{
-    background-color: #82a2c5;
+    background-color: #ACC2CC;
     padding-top: 50px;
     padding-bottom: 100px;
     margin-top: 70px;
@@ -185,7 +185,7 @@ body{
 }
 
 .bodycopy-full-width-olive{
-    background-color: #82a2c5;
+    background-color: #ACC2CC;
     padding-top: 100px;
     padding-bottom: 125px;
 }
@@ -209,12 +209,13 @@ body{
 }
 
 #left-half img{
-    height: 65vh;
+    height: 60vh;
+    width: 100%;
     object-fit: cover;
 }
 
 #right-half img{
-    height: 65vh;
+    height: 60vh;
     object-fit: cover;
 }
 
@@ -431,19 +432,31 @@ margin-bottom: 100px;
     margin-bottom: 50px;
   }
 
+ 
+  #left-half-no-crop{
+    width: 50%;
+  }
+
+  #left-half-no-crop img{
+    width: 100%;
+  }
+  
   #left-half{
     width: 50%;
   }
 
-  #left-half img{
-    width: 100%;
-  }
 
   #right-half{
     width: 50%;
   }
 
+  #right-half-no-crop{
+    width: 50%;
+  }
 
+  #right-half-no-crop img{
+    width: 100%;
+  }
 
   #right-half img{
     width: 100%;
