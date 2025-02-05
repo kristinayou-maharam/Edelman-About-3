@@ -136,7 +136,7 @@ body{
 }
 
 .caption{
-    color: rgb(0, 0, 0);
+    color: black;
     font-size: 12px;
     line-height: 1.5;
     margin-left: 0%;
@@ -145,7 +145,7 @@ body{
 }
 
 .video-caption{
-    color: #000000;
+    color: black;
     font-size: 12px;
     line-height: 1.5;
     margin-left: 50px;
@@ -155,7 +155,7 @@ body{
 }
 
 .caption-black{
-    color: #000000;
+    color: black;
     font-size: 12px;
     line-height: 1.5;
     margin-left: 0%;
@@ -164,7 +164,7 @@ body{
 }
 
 .carousel-img-caption{
-    color: rgb(0, 0, 0);
+    color: black;
     font-size: 12px;
     margin-top: 10px;
     padding-left: 18px;
@@ -172,7 +172,7 @@ body{
 }
 
 .carousel-img-caption-black{
-    color: #000000;
+    color: black;
     font-size: 12px;
     margin-top: 10px;
 }
@@ -209,13 +209,13 @@ body{
 }
 
 #left-half img{
-    height: 60vh;
+    height: 65vh;
     width: 100%;
     object-fit: cover;
 }
 
 #right-half img{
-    height: 60vh;
+    height: 65vh;
     object-fit: cover;
 }
 
@@ -905,7 +905,7 @@ margin-bottom: 50px;
         }
 
     .carousel-img-caption{
-        color: rgb(0, 0, 0);
+        color: black;
         font-size: 12px;
         margin-top: 10px;
         padding-left: 18px;
